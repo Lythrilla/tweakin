@@ -1,0 +1,94 @@
+# Join Message Settings
+join-message:
+  # Enable join message feature
+  enabled: true
+  # Join messages
+  messages:
+    - " "
+    - "  &bWelcome back, &f%player_name%"
+    - "  &7▶ Playtime: &f%statistic_time_played%"
+    - "  &7▶ Online Players: &f%server_online%"
+    - "  &7▶ Last Login: &f%player_last_login%"
+    - " "
+  # Join notification
+  join: "&8[&a+&8] &7Player &f%player_name% &7joined the game"
+
+# Quit Message Settings
+quit-message:
+  # Enable quit message feature
+  enabled: true
+  # Quit notification
+  quit: "&8[&c-&8] &7Player &f%player_name% &7left the game"
+
+# Cactus Protection Settings
+cactus-protection:
+  # Enable cactus protection for dropped items
+  enabled: true
+
+# Falling Block Settings
+falling-block:
+  # Enable falling block breaking non-full blocks
+  enabled: true
+  # Enable falling blocks to break non-full blocks instead of becoming items
+  # When set to true, falling blocks will break non-full blocks below instead of becoming items
+  break-non-full-block: true
+  # Enable dropping items when breaking non-full blocks
+  drop-items: true
+  # Enable breaking effect particles
+  particle-effect: true
+
+# Double Door Settings
+double-door:
+  # Enable double door synchronization
+  enabled: true
+
+# Silk Touch Plus Settings
+silk-touch-plus:
+  # Enable silk touch enhancement
+  enabled: true
+  # List of blocks that can be obtained with silk touch
+  # Format: 
+  # "block_id": true/false
+  # Example: "minecraft:spawner": true
+  blocks:
+    "minecraft:budding_amethyst": true # Budding Amethyst
+    "minecraft:cobweb": true           # Cobweb
+    "minecraft:farmland": true         # Farmland
+
+# Auto Plant Settings
+auto-plant:
+  # Enable auto planting feature
+  enabled: true
+  # Delay before attempting to plant dropped items (seconds)
+  plant-delay: 15
+  # Enable planting success particle effect
+  particle-effect: true
+
+# Block Damage Settings
+block-damage:
+  enabled: true
+  damage: 2.0 # Damage per second when standing on dangerous blocks
+
+# Dragon Egg Settings
+dragon-egg:
+  # Enable dragon egg dropping on every dragon kill
+  enabled: true
+
+# Death Hunger Settings
+hunger:
+  # Enable death hunger retention
+  enabled: true
+  # Food level when respawning after starvation
+  starvation-respawn-food: 4
+  # Commands triggered on starvation death
+  starvation-commands:
+    # [PLAYER] - Execute as player
+    # [CONSOLE] - Execute as console
+    # [OP] - Execute as OP
+    # [MESSAGE] - Send message to player
+    # Available variables: %player% - Player name
+    - "[CONSOLE] title %player% title {\"text\":\"Starved to death\",\"color\":\"red\"}"
+    - "[CONSOLE] playsound minecraft:entity.wither.spawn player %player%"
+    - "[PLAYER] me is too hungry..."
+    - "[OP] effect give %player% weakness 30 0"
+    - "[MESSAGE] §cYou starved to death!" 

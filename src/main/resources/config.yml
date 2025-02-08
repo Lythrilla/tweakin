@@ -1,0 +1,94 @@
+# 进服提示设置
+join-message:
+  # 是否启用进服提示
+  enabled: true
+  # 进服消息
+  messages:
+    - " "
+    - "  &b欢迎回来，&f%player_name%"
+    - "  &7▶ 在线时长: &f%statistic_time_played%"
+    - "  &7▶ 当前在线: &f%server_online%"
+    - "  &7▶ 上次登录: &f%player_last_login%"
+    - " "
+  # 进服信息
+  join: "&8[&a+&8] &7玩家 &f%player_name% &7加入了游戏"
+
+# 退服提示设置
+quit-message:
+  # 是否启用退服提示
+  enabled: true
+  # 退服信息
+  quit: "&8[&c-&8] &7玩家 &f%player_name% &7离开了游戏"
+
+# 仙人掌保护设置
+cactus-protection:
+  # 是否启用仙人掌保护掉落物功能
+  enabled: true
+
+# 重力方块设置
+falling-block:
+  # 是否启用重力方块破坏不完整方块功能
+  enabled: true
+  # 是否启用重力方块破坏不完整方块而不是变成掉落物
+  # 当设置为true时，重力方块会破坏下方的不完整方块而不是自己变成掉落物
+  break-non-full-block: true
+  # 是否在破坏不完整方块时生成掉落物
+  drop-items: true
+  # 是否显示破坏效果
+  particle-effect: true
+
+# 双开门设置
+double-door:
+  # 是否启用双开门功能
+  enabled: true
+
+# 精准采集增强设置
+silk-touch-plus:
+  # 是否启用精准采集增强功能
+  enabled: true
+  # 可以用精准采集获得的方块列表
+  # 格式: 
+  # "方块ID": true/false
+  # 例如: "minecraft:spawner": true
+  blocks:
+    "minecraft:budding_amethyst": true # 紫水晶母岩
+    "minecraft:cobweb": true           # 蜘蛛网
+    "minecraft:farmland": true         # 耕地
+
+# 自动种植设置
+auto-plant:
+  # 是否启用自动种植功能
+  enabled: true
+  # 掉落物在地上多久后尝试种植（秒）
+  plant-delay: 15
+  # 是否显示种植成功的粒子效果
+  particle-effect: true
+
+# 站在蜡烛和切石机上的伤害效果
+block-damage:
+  enabled: true
+  damage: 2.0 # 每秒造成的伤害值
+
+# 末影龙蛋生成设置
+dragon-egg:
+  # 是否启用每次击杀末影龙都生成龙蛋
+  enabled: true
+
+# 死亡饥饿值设置
+hunger:
+  # 是否启用死亡保留饥饿值功能
+  enabled: true
+  # 饿死复活时的饱食度
+  starvation-respawn-food: 4
+  # 饿死后触发的命令
+  starvation-commands:
+    # [PLAYER] - 以玩家身份执行
+    # [CONSOLE] - 以控制台身份执行
+    # [OP] - 以OP身份执行
+    # [MESSAGE] - 向玩家发送消息
+    # 可用变量：%player% - 玩家名字
+    - "[CONSOLE] title %player% title {\"text\":\"饿死了\",\"color\":\"red\"}"
+    - "[CONSOLE] playsound minecraft:entity.wither.spawn player %player%"
+    - "[PLAYER] me 太饿了..."
+    - "[OP] effect give %player% weakness 30 0"
+    - "[MESSAGE] §c你饿死了！"
