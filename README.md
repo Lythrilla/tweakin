@@ -1,3 +1,5 @@
+![image](https://github.com/user-attachments/assets/92c1c2db-48ec-4a48-820c-340312abe1a5)
+
 # Tweakin - Minecraft 服务器增强插件
 
 ![License](https://img.shields.io/badge/License-MIT-green)
